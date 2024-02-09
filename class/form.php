@@ -12,14 +12,13 @@ class Form
         $this->dataForm = $dataForm;
     }
 
-    private function surround($tag)
+    private function surround($html)
     {
-
+        return "<{$this->surround}>{$html}</{$this->surround}>";
     }
-
     public function input($name)
     {
-        return $this->surround('<input type="text" name="' . $name . '">') ;
+        return $this->surround('<input type="text" name="' . $name . '">');
     }
 
     public function submit()

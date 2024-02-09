@@ -5,7 +5,6 @@ use class\form;
 $form = new Form(array(
     'username' => 'Unknown'
 ));
-
 echo $form->input('username');
 echo $form->input('password');
 echo $form->submit();
