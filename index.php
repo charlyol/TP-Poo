@@ -12,13 +12,13 @@ $harry = new personnage("Harry");
 
 $merlin->attaque($harry);
 
-if(personnage->mort()){
+if($harry->mort()){
     echo 'Perso est Dead :(';
 }else{
-    echo 'Perso à survécu';
+    echo 'Perso à survécu avec'. $harry->vie;
 }
 
 var_dump($merlin);
 var_dump($harry);
 
-
+echo $merlin->getNom();
