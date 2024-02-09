@@ -33,7 +33,6 @@ class personnage
 
     public function attaque($cible)
     {
-        $cible->vie = 20;
-        var_dump($cible);
+        $cible->vie -= $this->atk;
     }
 }
