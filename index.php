@@ -1,24 +1,20 @@
 <?php
-use class\personnage;
 
-spl_autoload_register( function (string $className) {
-    include str_replace( '\\',  DIRECTORY_SEPARATOR, $className) . '.php';
-});
+use class\form;
 
-$merlin = new personnage("Merlin");
-$merlin->regenerer(5);
+$form = new Form(array(
+    'username' => 'Unknown'
+));
 
-$harry = new personnage("Harry");
+echo $form->input('username');
+echo $form->input('password');
+echo $form->submit();
 
-$merlin->attaque($harry);
 
-if($harry->mort()){
-    echo 'Perso est Dead :(';
-}else{
-    echo 'Perso à survécu avec'. $harry->vie;
-}
-
-var_dump($merlin);
-var_dump($harry);
-
-echo $merlin->getNom();
+$form = new Form();
+echo $form->input('firstName');
+echo $form->input('name');
+echo $form->input('mail');
+echo $form->input('pseudo');
+echo $form->input('password');
+echo $form->submit();
